@@ -36,11 +36,6 @@ function App() {
 
   return (
     <div className="app">
-      <div className="bg-blobs" aria-hidden="true">
-        <span className="blob blob-a" />
-        <span className="blob blob-b" />
-      </div>
-
       <main className="container">
         <h1 className="title">Onze Liefde Telt…</h1>
 

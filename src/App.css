@@ -5,7 +5,8 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   color: #2b2b2b;
-  background: linear-gradient(135deg, #fce7f3 0%, #ede9fe 50%, #e0e7ff 100%);
+  /* Soft pastel pink background */
+  background: #fde2e4; /* or #fff0f5 */
 }
 
 .App {
@@ -47,30 +48,8 @@ body {
   }
 }
 
-/* Soft animated background blobs */
-.bg-blobs .blob {
-  position: absolute;
-  filter: blur(60px);
-  opacity: 0.4;
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-}
-.blob-a {
-  width: 360px; height: 360px;
-  background: #f472b6; /* pink-400 */
-  top: -60px; left: -80px;
-  animation-delay: 0.2s;
-}
-.blob-b {
-  width: 420px; height: 420px;
-  background: #818cf8; /* indigo-400 */
-  bottom: -90px; right: -100px;
-  animation-delay: 0.8s;
-}
-@keyframes float {
-  0%, 100% { transform: translate3d(0,0,0); }
-  50% { transform: translate3d(10px, -8px, 0); }
-}
+/* Remove blob visuals */
+.bg-blobs { display: none; }
 
 /* Card container */
 .container {
