@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
 function App() {
   const startDate = new Date('2024-02-29T00:00:00');
 
-  const calculateTime = () => {
+  const calculateTime = useCallback(() => {
     const now = new Date();
     const difference = now.getTime() - startDate.getTime();
 
@@ -25,14 +25,14 @@ function App() {
     }
 
     return { years, months, days: calcDays, totalDays: days };
-  };
+  }, [startDate]);
 
   const [time, setTime] = useState(calculateTime());
 
   useEffect(() => {
     const interval = setInterval(() => setTime(calculateTime()), 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [calculateTime]);
 
   return (
     <div className="app">
