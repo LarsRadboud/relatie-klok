@@ -47,7 +47,8 @@ function App() {
         <section className="stats">
           <div className="stat-card stat-pink">
             <div className="stat-value">
-              {time.years} <span className="stat-label">Jaren</span>
+              {time.years} 
+              { time.years === 1 ? <span className="stat-label">Jaar</span> : <span className="stat-label">Jaren</span> }
             </div>
           </div>
 
