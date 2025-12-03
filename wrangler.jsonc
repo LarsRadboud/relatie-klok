@@ -1,5 +1,5 @@
 {
   "name": "relatie-klok",
   "compatibility_date": "2025-12-03",
-  "assets": { "directory": "./dist" }
+  "assets": { "directory": "./build" }
 }
