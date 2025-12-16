@@ -43,19 +43,21 @@ function App() {
           <div className="stat-card stat-pink">
             <div className="stat-value">
               {time.years} 
-              { time.years === 1 ? <span className="stat-label">Jaar</span> : <span className="stat-label">Jaren</span> }
+              <span className="stat-label">Jaar</span>
             </div>
           </div>
 
           <div className="stat-card stat-purple">
             <div className="stat-value">
-              {time.months} <span className="stat-label">Maanden</span>
+              {time.months}
+              { time.months === 1 ? <span className="stat-label">Maand</span> : <span className="stat-label">Maanden</span> }
             </div>
           </div>
 
           <div className="stat-card stat-blue">
             <div className="stat-value">
-              {time.days} <span className="stat-label">Dagen</span>
+              {time.days}
+              { time.days === 1 ? <span className="stat-label">Dag</span> : <span className="stat-label">Dagen</span> }
             </div>
           </div>
         </section>
